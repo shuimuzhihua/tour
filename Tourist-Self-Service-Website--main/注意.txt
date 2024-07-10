@@ -1,0 +1,74 @@
+每个APP应用
+	创建一个views文件夹，里面创建__init__.py和其他功能文件
+	写models.py建表
+	写admin.py
+	创建序列化文件: serializers.py
+	APIView创建
+	创建并写urls.py
+	views的init.py需要导入APIView
+	
+总程序
+	urls.py: path需要include路径
+	settings: installed_apps添加应用
+	数据迁移
+
+
+
+路径：
+(1) 管理员
+localhost:8000/admin
+
+(2) 登录
+http://127.0.0.1:8000/api/login/
+测试
+{
+	"username": "newuser",
+	"password": "password123"
+}
+Authorization
+Token c217f26c1b0170e01175444a6e5f2d06951ab2a4
+Header
+
+(3) 景点
+http://127.0.0.1:8000/api/attractions/
+测试
+{
+    "name": "南锣鼓巷",
+    "star_level": 0,
+    "rating": 4,
+    "description": "无",
+    "opening_hours": "06/15-07/15 09:00-21:00开放",
+    "popularity": 10,
+    "comment_count": 0,
+    "address": "待定",
+    "official_phone": "12345678"
+}
+
+(4) 公司
+http://127.0.0.1:8000/api/agencies/
+测试
+{
+    "ag_name": "中青旅控股股份有限公司",
+    "ag_tel": "010-5815-3300",
+    "ag_brief": "中青旅控股股份有限公司（China CYTS Tours Holding Co., Ltd.）是中国领先的旅游服务提供商，成立于1997年。公司主要业务包括旅游线路、酒店预订、景区管理、商务会奖旅游等。中青旅以其高品质的服务和创新的旅游产品在业内享有盛誉。"
+}
+
+(5) 线路
+http://127.0.0.1:8000/api/routes/
+测试
+{
+    "ag_name": "中青旅控股股份有限公司",
+    "ag_tel": "010-5815-3300",
+    "ag_brief": "中青旅控股股份有限公司（China CYTS Tours Holding Co., Ltd.）是中国领先的旅游服务提供商，成立于1997年。公司主要业务包括旅游线路、酒店预订、景区管理、商务会奖旅游等。中青旅以其高品质的服务和创新的旅游产品在业内享有盛誉。"
+}
+
+(6) 景点-线路对应
+http://127.0.0.1:8000/api/rt_at/
+
+(7) 线路-日期对应
+http://127.0.0.1:8000/api/rt_rq/
+
+(8) 预约表
+http://127.0.0.1:8000/api/reservations/
+
+
